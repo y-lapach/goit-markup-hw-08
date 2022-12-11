@@ -1,0 +1,25 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+button {
+    border-width: 0px;
+    cursor: pointer;
+}
+
+input {
+    cursor: pointer;
+}
+
+body {
+    background-color: $primary-white;
+    color: $text-color-grey;
+    font-family: $font-roboto;
+    letter-spacing: 0.03em;
+}

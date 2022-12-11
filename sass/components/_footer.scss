@@ -1,0 +1,145 @@
+.page-footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $footer-bg;
+}
+
+.footer-container {
+    @include centeredFlex(flex,baseline);
+    position: relative;
+}
+
+.address-container {
+    margin-right: 70px;
+}
+
+.address {
+    font-style: normal;
+    color: $primary-white;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.address__location {
+    margin-bottom: 9px;
+}
+
+.address__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.address__link {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: $ftr-address-contacts;
+    transition: color $transition-time;
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
+}
+
+.socials__text,
+.signup-form__text {
+    margin-bottom: 20px;
+    color: $primary-white;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.socials__list {
+    display: flex;
+    justify-content: center;
+}
+
+.socials__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.socials__link {
+    @include centeredFlex();
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: $primary-white;
+    background-color: $footer-socials-bg;
+    transition: background-color $transition-time;
+
+        &:hover,
+        &:focus {
+            background-color: $accent-color;
+        }
+}
+
+.socials__icon {
+    fill: currentColor;
+}
+
+/*----------NEWSLETTER SIGNUP FORM-----------*/
+.signup-container {
+    margin-left: auto;
+}
+
+.signup-form__data {
+    display: flex;
+    text-align: center;
+}
+
+.signup-form__input {
+    min-width: 358px;
+    height: 50px;
+    padding-left: 16px;
+    margin-right: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: transparent;
+    outline: 1px solid transparent;
+    transition: outline $transition-time;
+
+        &:focus {
+            outline: 1px solid $accent-color;
+        }
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.3;
+            letter-spacing: 0.03em;
+            color: rgba(255, 255, 255, 0.6);
+        }
+}
+
+.signup-form__button {
+    @include centeredFlex();
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    color: $primary-white;
+    background: $accent-color;
+    transition: color $transition-time, background-color $transition-time;
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+            background-color: $primary-white;
+        }
+}
+
+.signup-form__icon {
+    margin-left: 10px;
+    fill: currentColor;
+}

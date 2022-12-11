@@ -1,0 +1,22 @@
+.logo {
+    color: $accent-color;
+    font-family: $font-rale;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+}
+
+.logo--black {
+    color: $logo-color-header;
+}
+
+.logo--white {
+    color: $primary-white;
+}
+
+.logo--mn-bottom {
+    display: inline-block;
+    margin-bottom: 20px;
+}

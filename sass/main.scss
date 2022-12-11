@@ -1,0 +1,36 @@
+@import './utils/variables';
+@import './utils/mixins';
+@import './base/reset';
+@import './base/common';
+@import './base/hide';
+
+/*Logo*/
+@import './components/logo';
+
+/*General container*/
+@import './components/container';
+
+/*Header*/
+@import './components/header';
+
+/*General section*/
+@import './components/section';
+
+/*Home page*/
+@import './components/hero';
+@import './components/features';
+@import './components/services';
+@import './components/team';
+@import './components/clients';
+
+
+/*Portfolio page*/
+@import './components/portfolio-section';
+@import './components/filter';
+@import './components/projects';
+
+/*Footer*/
+@import './components/footer';
+
+/*Modal window with form*/
+@import './components/modal-window';

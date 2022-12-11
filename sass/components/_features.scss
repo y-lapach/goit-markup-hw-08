@@ -1,0 +1,35 @@
+.features-list {
+    display: flex;
+}
+
+.features__title {
+    @include sectiionTitle();
+}
+.features-list__item {
+    width: 270px;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+}
+
+.features-list__thumb {
+    @include centeredFlex();
+    justify-content: center;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: $bg-light-grey;
+}
+
+.features-list__title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $text-color-darkgrey;
+}
+
+.features-list__text {
+    font-size: 14px;
+    line-height: 1.7;
+}
