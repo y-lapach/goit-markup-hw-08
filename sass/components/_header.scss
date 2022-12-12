@@ -2,7 +2,7 @@
     position: relative;
     border-bottom: 1px solid $header-border;
 
-    @media screen and (min-width:1600px) {
+    @media screen and (min-width:768px) {
         position: inherit;
     }
 }
@@ -10,42 +10,55 @@
 .menu-container {
     display: none;
     position:absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     width: 100%;
-    padding: 0px 40px 48px;
+    height:100vh;
+    overflow-y: scroll;
+    padding: 48px 40px;
     text-align: left;
     background-color: $primary-white;
+
+        @media screen and (min-width:768px) {
+            display: block;
+            position: inherit;
+            @include centeredFlex();
+            height: 100%;
+            padding: 0;
+            overflow: hidden;
+        }
 
         &.is-open {
             display: block;
         }
-
-    @media screen and (min-width:1600px) {
-        display: block;
-        position: inherit;
-        @include centeredFlex();
-        padding: 0;
-
-    }
 }
 
 .navigation {
     @include centeredFlex();
     align-items: center;
     justify-content: space-between;
-    min-height: 80px;
+    min-height: 60px;
 }
 
 .navigation-list {
-    @media screen and (min-width:1600px){
+    margin-bottom: 306px;
+    
+    @media screen and (min-width:768px){
         display: flex;
+        margin-left: 88px;
+        margin-bottom:0;
+    }
+    @media screen and (min-width:1600px){
         margin-left: 93px;
     }
 }
 
 .navigation-list__item:not(:last-child) {
-    margin-right: 50px;
+    margin-right: 0px;
+
+    @media screen and (min-width:768px){
+        margin-right: 50px;
+    }
 }
 
 .navigation-list__link {
@@ -64,7 +77,7 @@
             color: $accent-color;
         }
 
-    @media screen and (min-width:1600px){
+    @media screen and (min-width:768px){
         padding-top: 32px;
         font-size: 14px;
         line-height: 1.14;
@@ -75,7 +88,7 @@
     position: relative;
     color: $accent-color;
 
-    @media screen and (min-width:1600px){
+    @media screen and (min-width:768px){
         &::after {
             content: "";
             display: block;
@@ -90,42 +103,76 @@
 }
 
 .contacts-list {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 64px;
+
+    @media screen and (min-width:768px) {
+        flex-direction: column;
+        margin-left: auto;
+        margin-bottom: 0;
+    }
+
     @media screen and (min-width:1600px) {
-        display: flex;
+        flex-direction: row;
         margin-left: auto;
     }
 }
 
 .contacts-list__link {
     @include centeredFlex();
-    padding-bottom: 32px;
     font-weight: 500;
-    font-size: 34px;
-    line-height: 1.18;
     letter-spacing: 0.02em;
     text-decoration: none;
     color: $text-color-grey;
     transition: color $transition-time;
+    
+        @media screen and (min-width:768px){
+            font-size: 12px;
+            line-height: 1.17;
 
-        &:hover,
-        &:focus {
-            color: $accent-color;
+            &:hover,
+            &:focus {
+                color: $accent-color;
+            }
+        }
+        @media screen and (min-width:1600px){
+            align-items: center;
+            font-size: 14px;
+            line-height: 1.14;
+            }
+}
+
+
+.contacts-list__item:not(:last-child) {
+    margin-bottom: 32px;
+
+        @media screen and (min-width:768px){
+            margin-bottom: 10px;
         }
 
         @media screen and (min-width:1600px){
-            padding-top: 32px;
-            font-size: 14px;
-            line-height: 1.14;
+            margin-bottom: 0;
+            margin-right: 50px;
         }
 }
 
-.contacts-list__item:not(:last-child) {
-    margin-right: 50px;
+@media screen and (max-width:767px){
+.contacts-list__phone {
+    font-size: 34px;
+    line-height: 1.18;
+    color: $accent-color;
+}
+.contacts-list__email {
+    font-size: 24px;
+    line-height: 1.17;
+    padding-bottom:0;
+}
 }
 
 .contacts-list__icon {
     display: none;
-    @media screen and (min-width:1600px){
+    @media screen and (min-width:768px){
         display: inline-block;
         margin-right: 10px;
         fill: currentColor;
@@ -133,26 +180,64 @@
     
 }
 .navigation__menu-button {
-    display: inline-flex;
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0;
     margin: 0;
     border: none;
+    border-radius: 50%;
+    color: $text-color-darkgrey;
     background-color: transparent;
 
-    @media screen and (min-width:1600px) {
+    @media screen and (min-width:768px) {
         display:none;
     }
+
+    .menu-container & {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
 }
-.navigation__menu-button .navigation__cross-icon {
-    display:none;
-}
-.navigation__menu-button.is-open .navigation__cross-icon {
-    display: block;
-}
-.navigation__menu-button .navigation__menu-icon {
-    display: block;
+.navigation__menu-icon,
+.navigation__cross-icon {
+    fill: currentColor;
+    transition: fill $transition-time;
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
 }
 
-.navigation__menu-button.is-open .navigation__menu-icon {
-    display: none;
+.socials-mob {
+    @include centeredFlex();
+
+    @media screen and (min-width:768px) {
+        display: none;
+    }
+}
+.socials-mob__item {
+    padding: 0 10px;
+
+        &:first-child {
+            padding-left:0;
+        }
+
+        &:last-child {
+            padding-right:0;
+        }
+        &:not(:last-child) {
+            border-right: 1px solid rgba(33, 33, 33, 0.2);
+        }
+}
+.socials-mob__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color:$accent-color;
 }
