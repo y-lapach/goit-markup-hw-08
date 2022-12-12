@@ -172,6 +172,7 @@
 
 .contacts-list__icon {
     display: none;
+
     @media screen and (min-width:768px){
         display: inline-block;
         margin-right: 10px;
@@ -215,10 +216,6 @@
 
 .socials-mob {
     @include centeredFlex();
-
-    @media screen and (min-width:768px) {
-        display: none;
-    }
 }
 .socials-mob__item {
     padding: 0 10px;
@@ -240,4 +237,12 @@
     line-height: 1.2;
     letter-spacing: 0.02em;
     color:$accent-color;
+}
+
+@media screen and (min-width:768px) {
+    .socials-mob,
+    .socials-mob__item,
+    .socials-mob__link{
+        display: none;
+    }
 }
