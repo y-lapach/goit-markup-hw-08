@@ -23,3 +23,6 @@ body {
     font-family: $font-roboto;
     letter-spacing: 0.03em;
 }
+body.modal-open {
+    overflow: hidden;
+}
