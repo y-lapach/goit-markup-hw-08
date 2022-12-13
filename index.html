@@ -19,26 +19,24 @@
     <header class="page-header">
       <div class="container">
         <nav class="navigation">
-        <a href="./index.html" class="logo">Web<span class="logo--black">Studio</span></a>
-        <button
-          class="navigation__menu-button open-menu"
-          aria-label="Перемикач мобільного меню"
-          aria-expanded="false"
-          aria-controls="menu-container"
-          data-menu-button
-        >
-          <svg data-menu-open class="navigation__menu-icon" width="24" height="16">
-            <use href="./images/icons.svg#icon-mob-menu"></use>
-          </svg>
-        </button>
-        <div class="menu-container" id="menu-container" data-menu>
+          <a href="./index.html" class="logo">Web<span class="logo--black">Studio</span></a>
           <button
-          class="navigation__menu-button close-menu">
-          <svg data-menu-close class="navigation__cross-icon" width="18.67" height="18.67">
-            <use href="./images/icons.svg#icon-close"></use>
-          </svg>
-          </svg>
-        </button>
+            class="navigation__menu-button open-menu"
+            aria-label="Перемикач мобільного меню"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg data-menu-open class="navigation__menu-icon" width="24" height="16">
+              <use href="./images/icons.svg#icon-mob-menu"></use>
+            </svg>
+          </button>
+          <div class="menu-container" id="menu-container" data-menu>
+            <button class="navigation__menu-button close-menu">
+              <svg data-menu-close class="navigation__cross-icon" width="18.67" height="18.67">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
             <ul class="navigation-list list">
               <li class="navigation-list__item">
                 <a href="./index.html" class="navigation-list__link current">Студія</a>
@@ -50,40 +48,43 @@
                 <a href="/" class="navigation-list__link">Контакти</a>
               </li>
             </ul>
-          <ul class="contacts-list list">
-            <li class="contacts-list__item">
-              <a href="mailto:info@devstudio.com" class="contacts-list__link contacts-list__email">
-                <svg class="contacts-list__icon" width="16" height="12">
-                  <use href="./images/icons.svg#icon-email"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="contacts-list__item">
-              <a href="tel:+380961111111" class="contacts-list__link contacts-list__phone">
-                <svg class="contacts-list__icon" width="10" height="16">
-                  <use href="./images/icons.svg#icon-telephone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-          <ul class="socials-mob list">
-            <li class="socials-mob__item">
-              <a class="socials-mob__link" href="#">Instagram</a>
-            </li>
-            <li class="socials-mob__item">
-              <a class="socials-mob__link" href="#">Twitter</a>
-            </li>
-            <li class="socials-mob__item">
-              <a class="socials-mob__link" href="#">Facebook</a>
-            </li>
-            <li class="socials-mob__item">
-              <a class="socials-mob__link" href="#">LinkedIn</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+            <ul class="contacts-list list">
+              <li class="contacts-list__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="contacts-list__link contacts-list__email"
+                >
+                  <svg class="contacts-list__icon" width="16" height="12">
+                    <use href="./images/icons.svg#icon-email"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts-list__item">
+                <a href="tel:+380961111111" class="contacts-list__link contacts-list__phone">
+                  <svg class="contacts-list__icon" width="10" height="16">
+                    <use href="./images/icons.svg#icon-telephone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+            <ul class="socials-mob list">
+              <li class="socials-mob__item">
+                <a class="socials-mob__link" href="#">Instagram</a>
+              </li>
+              <li class="socials-mob__item">
+                <a class="socials-mob__link" href="#">Twitter</a>
+              </li>
+              <li class="socials-mob__item">
+                <a class="socials-mob__link" href="#">Facebook</a>
+              </li>
+              <li class="socials-mob__item">
+                <a class="socials-mob__link" href="#">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
     <main>
@@ -184,9 +185,17 @@
           <ul class="team-list list">
             <li class="team-list__item">
               <img
-                src="./images/igor-demianenko.jpg"
+                srcset="
+                  ./images/igor-demianenko-mob.jpg        450w,
+                  ./images/igor-demianenko-mob-2x.jpg     900w,
+                  ./images/igor-demianenko-tablet.jpg     354w,
+                  ./images/igor-demianenko-tablet-2x.jpg  708w,
+                  ./images/igor-demianenko-desktop.jpg    270w,
+                  ./images/igor-demianenko-desktop-2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/igor-demianenko-mob.jpg"
                 alt="Ігор Дем'яненко - Product designer"
-                width="270"
                 class="team-list__img"
               />
               <div class="team-list__member member">
@@ -226,9 +235,17 @@
             </li>
             <li class="team-list__item">
               <img
-                src="./images/olga-repina.jpg"
+                srcset="
+                  ./images/olga-repina-mob.jpg        450w,
+                  ./images/olga-repina-mob-2x.jpg     900w,
+                  ./images/olga-repina-tablet.jpg     354w,
+                  ./images/olga-repina-tablet-2x.jpg  708w,
+                  ./images/olga-repina-desktop.jpg    270w,
+                  ./images/olga-repina-desktop-2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/olga-repina-mob.jpg"
                 alt="Ольга Репіна - Frontend developer"
-                width="270"
                 class="team-list__img"
               />
               <div class="team-list__member member">
@@ -268,9 +285,17 @@
             </li>
             <li class="team-list__item">
               <img
-                src="./images/mykola-tarasov.jpg"
+                srcset="
+                  ./images/mykola-tarasov-mob.jpg        450w,
+                  ./images/mykola-tarasov-mob-2x.jpg     900w,
+                  ./images/mykola-tarasov-tablet.jpg     354w,
+                  ./images/mykola-tarasov-tablet-2x.jpg  708w,
+                  ./images/mykola-tarasov-desktop.jpg    270w,
+                  ./images/mykola-tarasov-desktop-2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/mykola-tarasov-mob.jpg"
                 alt="Микола Тарасов - Marketing"
-                width="270"
                 class="team-list__img"
               />
               <div class="team-list__member member">
@@ -310,9 +335,17 @@
             </li>
             <li class="team-list__item">
               <img
-                src="./images/mykhailo-iermakov.jpg"
+                srcset="
+                  ./images/mykhailo-iermakov-mob.jpg        450w,
+                  ./images/mykhailo-iermakov-mob-2x.jpg     900w,
+                  ./images/mykhailo-iermakov-tablet.jpg     354w,
+                  ./images/mykhailo-iermakov-tablet-2x.jpg  708w,
+                  ./images/mykhailo-iermakov-desktop.jpg    270w,
+                  ./images/mykhailo-iermakov-desktop-2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/mykhailo-iermakov-mob.jpg"
                 alt="Михайло Єрмаков - UI designer"
-                width="270"
                 class="team-list__img"
               />
               <div class="team-list__member member">
