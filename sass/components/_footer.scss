@@ -5,12 +5,36 @@
 }
 
 .footer-container {
-    @include centeredFlex(flex,baseline);
     position: relative;
-}
+    @include centeredFlex();
+    flex-direction: column;
+    text-align: center;
 
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        flex-direction:unset;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    @media screen and (min-width:1200px) {
+        align-items: baseline;
+        flex-direction: unset;
+        text-align: left;
+    }
+}
+.footer-container>* {
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        flex: 1 1 auto;
+    } 
+}
 .address-container {
-    margin-right: 70px;
+    @media screen and (min-width:768px) {
+        margin-right: 165px;
+        margin-bottom: 60px;
+    }
+    @media screen and (min-width:1200px) {
+        margin-right: 70px;
+        margin-bottom: 0;
+    }
 }
 
 .address {
@@ -22,11 +46,24 @@
 }
 
 .address__location {
-    margin-bottom: 9px;
+    margin-bottom: 12px;
+
+    @media screen and (min-width:1200px) {
+        margin-bottom: 9px;
+    }
 }
 
+.address__list {
+    @media screen and (max-width:767px) {
+        margin-bottom: 60px;
+    }
+}
 .address__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 12px;
+    
+    @media screen and (min-width:1200px) {
+        margin-bottom: 9px;
+    }
 }
 
 .address__link {
@@ -43,6 +80,11 @@
         }
 }
 
+.socials-container {
+    @media screen and (max-width:767px) {
+        margin-bottom: 60px;
+    }
+}
 .socials__text,
 .signup-form__text {
     margin-bottom: 20px;
@@ -85,25 +127,49 @@
 
 /*----------NEWSLETTER SIGNUP FORM-----------*/
 .signup-container {
-    margin-left: auto;
+    width:100%;
+
+    @media screen and (max-width:1199px) {
+        margin: 0 auto;
+    }
+    @media screen and (min-width:1200px) {
+        width:auto;
+        margin-left: auto;
+    }
+    
 }
 
 .signup-form__data {
-    display: flex;
-    text-align: center;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        @media screen and (max-width:1199px){
+            flex-direction: column;
+        }
 }
 
 .signup-form__input {
-    min-width: 358px;
+    width:100%;
     height: 50px;
     padding-left: 16px;
-    margin-right: 12px;
+    margin-bottom: 20px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     color: rgba(255, 255, 255, 0.6);
     background-color: transparent;
     outline: 1px solid transparent;
     transition: outline $transition-time;
+    
+    @media screen and (min-width:480px) {
+        width:auto;
+        min-width: 450px;
+    }
+    @media screen and (min-width:1200px) {
+        min-width: 358px;
+        margin-right: 12px;
+        margin-bottom: 0;
+    }
 
         &:focus {
             outline: 1px solid $accent-color;
