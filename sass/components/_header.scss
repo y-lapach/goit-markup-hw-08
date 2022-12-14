@@ -225,6 +225,9 @@
 
 .socials-mob {
     @include centeredFlex();
+    @media screen and (max-width:479px) {
+        flex-wrap: wrap;
+    }
 }
 .socials-mob__item {    
     &:not(:last-child)::after {

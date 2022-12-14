@@ -442,6 +442,12 @@ body.modal-open {
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (max-width: 479px) {
+  .socials-mob {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 
 .socials-mob__item:not(:last-child)::after {
   content: "";
@@ -511,6 +517,11 @@ body.modal-open {
   .hero {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-mob-2x.jpg");
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-mob-2x.jpg");
+  }
+}
+@media screen and (max-width: 479px) {
+  .hero {
+    width: 100%;
   }
 }
 @media screen and (min-width: 480px) {
@@ -1524,6 +1535,12 @@ body.modal-open {
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 100%;
+    height: auto;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
