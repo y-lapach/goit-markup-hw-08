@@ -19,26 +19,24 @@
     <header class="page-header">
       <div class="container">
         <nav class="navigation">
-        <a href="./index.html" class="logo">Web<span class="logo--black">Studio</span></a>
-        <button
-          class="navigation__menu-button open-menu"
-          aria-label="Перемикач мобільного меню"
-          aria-expanded="false"
-          aria-controls="menu-container"
-          data-menu-button
-        >
-          <svg data-menu-open class="navigation__menu-icon" width="24" height="16">
-            <use href="./images/icons.svg#icon-mob-menu"></use>
-          </svg>
-        </button>
-        <div class="menu-container" id="menu-container" data-menu>
+          <a href="./index.html" class="logo">Web<span class="logo--black">Studio</span></a>
           <button
-          class="navigation__menu-button close-menu">
-          <svg data-menu-close class="navigation__cross-icon" width="18.67" height="18.67">
-            <use href="./images/icons.svg#icon-close"></use>
-          </svg>
-          </svg>
-        </button>
+            class="navigation__menu-button open-menu"
+            aria-label="Перемикач мобільного меню"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg data-menu-open class="navigation__menu-icon" width="24" height="16">
+              <use href="./images/icons.svg#icon-mob-menu"></use>
+            </svg>
+          </button>
+          <div class="menu-container" id="menu-container" data-menu>
+            <button class="navigation__menu-button close-menu">
+              <svg data-menu-close class="navigation__cross-icon" width="18.67" height="18.67">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
             <ul class="navigation-list list">
               <li class="navigation-list__item">
                 <a href="./index.html" class="navigation-list__link">Студія</a>
@@ -50,26 +48,43 @@
                 <a href="/" class="navigation-list__link">Контакти</a>
               </li>
             </ul>
-          <ul class="contacts-list list">
-            <li class="contacts-list__item">
-              <a href="mailto:info@devstudio.com" class="contacts-list__link">
-                <svg class="contacts-list__icon" width="16" height="12">
-                  <use href="./images/icons.svg#icon-email"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="contacts-list__item">
-              <a href="tel:+380961111111" class="contacts-list__link">
-                <svg class="contacts-list__icon" width="10" height="16">
-                  <use href="./images/icons.svg#icon-telephone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
+            <ul class="contacts-list list">
+              <li class="contacts-list__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="contacts-list__link contacts-list__email"
+                >
+                  <svg class="contacts-list__icon" width="16" height="12">
+                    <use href="./images/icons.svg#icon-email"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts-list__item">
+                <a href="tel:+380961111111" class="contacts-list__link contacts-list__phone">
+                  <svg class="contacts-list__icon" width="10" height="16">
+                    <use href="./images/icons.svg#icon-telephone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+            <ul class="socials-mob list">
+              <li class="socials-mob__item">
+                <a class="socials-mob__link" href="#">Instagram</a>
+              </li>
+              <li class="socials-mob__item">
+                <a class="socials-mob__link" href="#">Twitter</a>
+              </li>
+              <li class="socials-mob__item">
+                <a class="socials-mob__link" href="#">Facebook</a>
+              </li>
+              <li class="socials-mob__item">
+                <a class="socials-mob__link" href="#">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
     <main>
@@ -98,10 +113,17 @@
               <a href="#" class="projects__link">
                 <div class="projects__about">
                   <img
-                    src="./images/project-technokriak-website.jpg"
+                    srcset="
+                      ./images/portfolio/mob/project-technokriak-website-mob.jpg            450w,
+                      ./images/portfolio/mob/project-technokriak-website-mob-2x.jpg         900w,
+                      ./images/portfolio/tablet/project-technokriak-website-tablet.jpg      354w,
+                      ./images/portfolio/tablet/project-technokriak-website-tablet-2x.jpg   708w,
+                      ./images/portfolio/desktop/project-technokriak-website-desktop.jpg    270w,
+                      ./images/portfolio/desktop/project-technokriak-website-desktop-2x.jpg 540w
+                    "
+                    sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/mob/project-technokriak-website-mob.jpg"
                     alt="Портфоліо - веб-сайт Технокряк"
-                    width="370"
-                    height="294"
                     class="projects__img"
                   />
                   <p class="projects__text">
@@ -120,10 +142,17 @@
               <a href="#" class="projects__link">
                 <div class="projects__about">
                   <img
-                    src="./images/project-new-orlean-vs-golden-star-poster.jpg"
+                    srcset="
+                      ./images/portfolio/mob/project-new-orlean-vs-golden-star-poster-mob.jpg            450w,
+                      ./images/portfolio/mob/project-new-orlean-vs-golden-star-poster-mob-2x.jpg         900w,
+                      ./images/portfolio/tablet/project-new-orlean-vs-golden-star-poster-tablet.jpg      354w,
+                      ./images/portfolio/tablet/project-new-orlean-vs-golden-star-poster-tablet-2x.jpg   708w,
+                      ./images/portfolio/desktop/project-new-orlean-vs-golden-star-poster-desktop.jpg    270w,
+                      ./images/portfolio/desktop/project-new-orlean-vs-golden-star-poster-desktop-2x.jpg 540w
+                    "
+                    sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/mob/project-new-orlean-vs-golden-star-poster-mob.jpg"
                     alt="Портфоліо - дизайн постера New Orlean vs Golden Star"
-                    width="370"
-                    height="294"
                     class="projects__img"
                   />
                   <p class="projects__text">
@@ -142,10 +171,17 @@
               <a href="#" class="projects__link">
                 <div class="projects__about">
                   <img
-                    src="./images/project-seafood-restaurant-app.jpg"
+                    srcset="
+                      ./images/portfolio/mob/project-seafood-restaurant-app-mob.jpg            450w,
+                      ./images/portfolio/mob/project-seafood-restaurant-app-mob-2x.jpg         900w,
+                      ./images/portfolio/tablet/project-seafood-restaurant-app-tablet.jpg      354w,
+                      ./images/portfolio/tablet/project-seafood-restaurant-app-tablet-2x.jpg   708w,
+                      ./images/portfolio/desktop/project-seafood-restaurant-app-desktop.jpg    270w,
+                      ./images/portfolio/desktop/project-seafood-restaurant-app-desktop-2x.jpg 540w
+                    "
+                    sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/mob/project-seafood-restaurant-app-mob.jpg"
                     alt="Портфоліо - додаток ресторану Seafood"
-                    width="370"
-                    height="294"
                     class="projects__img"
                   />
                   <p class="projects__text">
@@ -164,10 +200,17 @@
               <a href="#" class="projects__link">
                 <div class="projects__about">
                   <img
-                    src="./images/project-prime-marketing.jpg"
+                    srcset="
+                      ./images/portfolio/mob/project-prime-marketing-mob.jpg            450w,
+                      ./images/portfolio/mob/project-prime-marketing-mob-2x.jpg         900w,
+                      ./images/portfolio/tablet/project-prime-marketing-tablet.jpg      354w,
+                      ./images/portfolio/tablet/project-prime-marketing-tablet-2x.jpg   708w,
+                      ./images/portfolio/desktop/project-prime-marketing-desktop.jpg    270w,
+                      ./images/portfolio/desktop/project-prime-marketing-desktop-2x.jpg 540w
+                    "
+                    sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/mob/project-prime-marketing-mob.jpg"
                     alt="Портфоліо - проєкт Prime - маркетинг"
-                    width="370"
-                    height="294"
                     class="projects__img"
                   />
                   <p class="projects__text">
@@ -186,10 +229,17 @@
               <a href="#" class="projects__link">
                 <div class="projects__about">
                   <img
-                    src="./images/project-boxes-app.jpg"
+                    srcset="
+                      ./images/portfolio/mob/project-boxes-app-mob.jpg            450w,
+                      ./images/portfolio/mob/project-boxes-app-mob-2x.jpg         900w,
+                      ./images/portfolio/tablet/project-boxes-app-tablet.jpg      354w,
+                      ./images/portfolio/tablet/project-boxes-app-tablet-2x.jpg   708w,
+                      ./images/portfolio/desktop/project-boxes-app-desktop.jpg    270w,
+                      ./images/portfolio/desktop/project-boxes-app-desktop-2x.jpg 540w
+                    "
+                    sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/mob/project-boxes-app-mob.jpg"
                     alt="Портфоліо - додаток Boxes"
-                    width="370"
-                    height="294"
                     class="projects__img"
                   />
                   <p class="projects__text">
@@ -208,10 +258,17 @@
               <a href="#" class="projects__link">
                 <div class="projects__about">
                   <img
-                    src="./images/project-inspiration-has-no-borders-website.jpg"
+                    srcset="
+                      ./images/portfolio/mob/project-inspiration-has-no-borders-website-mob.jpg            450w,
+                      ./images/portfolio/mob/project-inspiration-has-no-borders-website-mob-2x.jpg         900w,
+                      ./images/portfolio/tablet/project-inspiration-has-no-borders-website-tablet.jpg      354w,
+                      ./images/portfolio/tablet/project-inspiration-has-no-borders-website-tablet-2x.jpg   708w,
+                      ./images/portfolio/desktop/project-inspiration-has-no-borders-website-desktop.jpg    270w,
+                      ./images/portfolio/desktop/project-inspiration-has-no-borders-website-desktop-2x.jpg 540w
+                    "
+                    sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/mob/project-inspiration-has-no-borders-website-mob.jpg"
                     alt="Портфоліо - веб-сайт Inspiration has no Borders"
-                    width="370"
-                    height="294"
                     class="projects__img"
                   />
                   <p class="projects__text">
@@ -230,10 +287,17 @@
               <a href="#" class="projects__link">
                 <div class="projects__about">
                   <img
-                    src="./images/project-limited-edition-journal-design.jpg"
+                    srcset="
+                      ./images/portfolio/mob/project-limited-edition-journal-design-mob.jpg            450w,
+                      ./images/portfolio/mob/project-limited-edition-journal-design-mob-2x.jpg         900w,
+                      ./images/portfolio/tablet/project-limited-edition-journal-design-tablet.jpg      354w,
+                      ./images/portfolio/tablet/project-limited-edition-journal-design-tablet-2x.jpg   708w,
+                      ./images/portfolio/desktop/project-limited-edition-journal-design-desktop.jpg    270w,
+                      ./images/portfolio/desktop/project-limited-edition-journal-design-desktop-2x.jpg 540w
+                    "
+                    sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/mob/project-limited-edition-journal-design-mob.jpg"
                     alt="Портфоліо - дизайн видання Limited Edition"
-                    width="370"
-                    height="294"
                     class="projects__img"
                   />
                   <p class="projects__text">
@@ -252,10 +316,17 @@
               <a href="#" class="projects__link">
                 <div class="projects__about">
                   <img
-                    src="./images/project-lab-marketing.jpg"
+                    srcset="
+                      ./images/portfolio/mob/project-lab-marketing-mob.jpg            450w,
+                      ./images/portfolio/mob/project-lab-marketing-mob-2x.jpg         900w,
+                      ./images/portfolio/tablet/project-lab-marketing-tablet.jpg      354w,
+                      ./images/portfolio/tablet/project-lab-marketing-tablet-2x.jpg   708w,
+                      ./images/portfolio/desktop/project-lab-marketing-desktop.jpg    270w,
+                      ./images/portfolio/desktop/project-lab-marketing-desktop-2x.jpg 540w
+                    "
+                    sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/mob/project-lab-marketing-mob.jpg"
                     alt="Портфоліо - проєкт LAB - маркетинг"
-                    width="370"
-                    height="294"
                     class="projects__img"
                   />
                   <p class="projects__text">
@@ -274,10 +345,17 @@
               <a href="#" class="projects__link">
                 <div class="projects__about">
                   <img
-                    src="./images/project-growing-business-app.jpg"
+                    srcset="
+                      ./images/portfolio/mob/project-growing-business-app-mob.jpg            450w,
+                      ./images/portfolio/mob/project-growing-business-app-mob-2x.jpg         900w,
+                      ./images/portfolio/tablet/project-growing-business-app-tablet.jpg      354w,
+                      ./images/portfolio/tablet/project-growing-business-app-tablet-2x.jpg   708w,
+                      ./images/portfolio/desktop/project-growing-business-app-desktop.jpg    270w,
+                      ./images/portfolio/desktop/project-growing-business-app-desktop-2x.jpg 540w
+                    "
+                    sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/mob/project-growing-business-app-mob.jpg"
                     alt="Портфоліо - додаток Growing Business"
-                    width="370"
-                    height="294"
                     class="projects__img"
                   />
                   <p class="projects__text">
@@ -370,5 +448,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
