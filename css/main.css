@@ -1538,7 +1538,7 @@ body.modal-open {
 }
 @media screen and (max-width: 479px) {
   .modal {
-    width: 100%;
+    width: 95%;
     height: auto;
   }
 }
