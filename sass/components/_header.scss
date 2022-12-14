@@ -28,10 +28,12 @@
             height: 100%;
             padding: 0;
             overflow: hidden;
+            z-index: inherit;
         }
 
         &.is-open {
-            display: block;
+            display: flex;
+            flex-direction: column;
         }
 }
 
@@ -43,7 +45,7 @@
 }
 
 .navigation-list {
-    margin-bottom: 306px;
+    margin-bottom: auto;
     
     @media screen and (min-width:768px){
         display: flex;
