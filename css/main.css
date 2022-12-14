@@ -368,6 +368,13 @@ body.modal-open {
     line-height: 1.18;
     color: #2196F3;
   }
+}
+@media screen and (max-width: 767px) and (max-width: 479px) {
+  .contacts-list__phone {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
   .contacts-list__email {
     font-size: 24px;
     line-height: 1.17;
@@ -551,6 +558,11 @@ body.modal-open {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
+}
+@media screen and (max-width: 479px) {
+  .hero__title {
+    font-size: 44px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
